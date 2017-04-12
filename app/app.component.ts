@@ -17,7 +17,7 @@ export class ProductComponent {
         this.products.push(new Product(103, 'TV', 18000, 'Electronics'));
     }
     save() {
-        this.products.push(Object.assign({}, this.product));
+        this.products.push(this.product);
     }
 
     clear() {

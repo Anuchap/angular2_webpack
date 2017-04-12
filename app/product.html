@@ -1,0 +1,68 @@
+<table class="table table-stripped table-bordered">
+    <tr>
+        <td>
+          <table class="table table-stripped table-bordered">  
+            <tr>
+                <td>Product Id:</td>
+                <td>
+                    <input type="text"
+                    [(ngModel)]='product.productId' 
+                     class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>Product Name:</td>
+                <td>
+                    <input type="text"
+                    [(ngModel)]='product.productName' 
+                    class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>Product Price:</td>
+                <td>
+                    <input type="text"
+                    [(ngModel)]='product.productPrice'
+                     class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>Category:</td>
+                <td>
+                    <input type="text"
+                    [(ngModel)]='product.category' 
+                    class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="clear" (click)="clear()" class="btn btn-default"/>
+                    <input type="button" value="save" (click)="save()" class="btn btn-success"/>
+                </td>
+            </tr>
+          </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table class="table table-stripped table-bordered">
+                <thead>
+                    <tr>
+                        <td>Product Id</td>
+                        <td>Product Name</td>
+                        <td>Product Price</td>
+                        <td>Product Category</td>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr *ngFor="let p of products">
+                       <td>{{p.productId}}</td>
+                       <td>{{p.productName}}</td>
+                       <td>{{p.productPrice}}</td>
+                       <td>{{p.category}}</td>
+                     </tr>   
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
